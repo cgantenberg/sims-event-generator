@@ -20,7 +20,9 @@ singularity build --sandbox singularity_sandbox_for_jetscape docker://jetscape/b
 # This provides the equivalent of a virtual machine where the code can be run
 # Various directories can be mounted in this "virtual machine" using the "--bind" option
 #
-singularity shell --writable  --bind /scratch:/mnt/ singularity_sandbox_for_jetscape/
+#for OSC Owens we had to change the line below (fs)
+#singularity shell --writable  --bind /scratch:/mnt/ singularity_sandbox_for_jetscape/
+singularity shell --writable  --bind /fs/scratch:/mnt/ singularity_sandbox_for_jetscape/
 
 # e.g. cd /mnt/jetscape/sims-jetscape/singularity_sandbox_for_jetscape/
 #
